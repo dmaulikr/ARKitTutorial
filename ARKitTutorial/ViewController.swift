@@ -32,33 +32,31 @@ class ViewController: UIViewController {
 
     // Cubeを追加する
     @IBAction func addCube(_ sender: Any) {
-        // ランダムでx,y,z軸の位置を決定
-//        let xCoords = randomFloat(min: -1, max: -0.2)
-//        let yCoords = randomFloat(min: -1, max: -0.2)
-//        let zCoords = randomFloat(min: -1, max: -0.2)
         
         // ノード作成
         let cubeNode = SCNNode()
-        // 正方形の形を定義
+        
+        // 正方形の形（大きさ）を定義
         let cubeGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
         
         // ノードのgeometryに追加
         cubeNode.geometry = cubeGeometry
         
-//        cubeNode.position = SCNVector3(xCoords, yCoords, zCoords)
+        
+        let cc = getCameraCoordinates(sceneView: sceneView)
+        
+        cubeNode.position = SCNVector3(cc.x, cc.y, cc.z)
         
         sceneView.scene.rootNode.addChildNode(cubeNode)
         
-        //----------------------------------------------------
+        // 正方形の面で画像を表示
+        //--------------------------------------------------------------------------------------------------------
         let cubeMaterial = SCNMaterial()
-        
-        // cubeMaterial.diffuse.contents = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         
         // 画像の読み込み
         cubeMaterial.diffuse.contents = UIImage(named: "popstar")
         
         cubeGeometry.firstMaterial = cubeMaterial
-        //----------------------------------------------------
     }
     
     @IBAction func addCup(_ sender: Any) {
@@ -70,6 +68,7 @@ class ViewController: UIViewController {
         var z = Float()
     }
     
+    // 現在のカメラ（スマホ）の位置を取得
     func getCameraCoordinates(sceneView: ARSCNView) -> myCameraCoordinates {
         let cameraTransform = sceneView.session.currentFrame?.camera.transform
         let cameraCoordinates = MDLTransform(matrix: cameraTransform!)
