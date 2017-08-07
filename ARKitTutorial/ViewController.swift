@@ -28,8 +28,12 @@ class ViewController: UIViewController {
 
     // Cubeを追加する
     @IBAction func addCube(_ sender: Any) {
-        let cubeNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
-        cubeNode.position = SCNVector3(0, 0, 0)
+        let cubeNode = SCNNode()
+        let cubeGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+        
+        cubeNode.geometry = cubeGeometry
+        
+        cubeNode.position = SCNVector3(0, 0, 0.5)
         sceneView.scene.rootNode.addChildNode(cubeNode)
     }
     

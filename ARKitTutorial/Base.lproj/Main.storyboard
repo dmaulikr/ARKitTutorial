@@ -21,11 +21,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc4-3P-Q3w">
-                                <rect key="frame" x="0.0" y="637" width="90" height="30"/>
+                                <rect key="frame" x="0.0" y="567" width="150" height="100"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="1Of-cx-Tb4"/>
-                                    <constraint firstAttribute="height" constant="30" id="6P7-PZ-EML"/>
+                                    <constraint firstAttribute="width" constant="150" id="OW8-Cw-sSR"/>
+                                    <constraint firstAttribute="height" constant="100" id="P3B-va-PIF"/>
                                 </constraints>
                                 <state key="normal" title="Add Cube"/>
                                 <connections>
@@ -33,11 +33,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgB-fq-Uzl">
-                                <rect key="frame" x="285" y="637" width="90" height="30"/>
+                                <rect key="frame" x="225" y="567" width="150" height="100"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="Z4B-cY-Fbd"/>
-                                    <constraint firstAttribute="height" constant="30" id="lOj-l4-Q4o"/>
+                                    <constraint firstAttribute="height" constant="100" id="PbY-Y2-PVU"/>
+                                    <constraint firstAttribute="width" constant="150" id="x0S-7v-ar9"/>
                                 </constraints>
                                 <state key="normal" title="Add Cup"/>
                                 <connections>
@@ -47,12 +47,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OgB-fq-Uzl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5SI-4c-oXX"/>
                             <constraint firstItem="3id-GV-jVr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CjC-1Z-NUl"/>
                             <constraint firstItem="3id-GV-jVr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CqJ-qR-OFb"/>
                             <constraint firstItem="dc4-3P-Q3w" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Jbr-iZ-etj"/>
+                            <constraint firstItem="dc4-3P-Q3w" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OfJ-sV-fec"/>
+                            <constraint firstItem="OgB-fq-Uzl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PX5-CW-Zff"/>
                             <constraint firstItem="OgB-fq-Uzl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ScF-1p-D4Z"/>
                             <constraint firstItem="dc4-3P-Q3w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XcS-YG-1H8"/>
                             <constraint firstItem="3id-GV-jVr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mS2-ic-8gp"/>
+                            <constraint firstItem="dc4-3P-Q3w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pVA-FP-rh6"/>
                             <constraint firstItem="OgB-fq-Uzl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="swi-Tz-6nb"/>
                             <constraint firstItem="3id-GV-jVr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v4h-DC-2eN"/>
                         </constraints>
