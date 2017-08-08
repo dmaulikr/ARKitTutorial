@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         let cubeNode = SCNNode()
         
         // 正方形の形（大きさ）を定義
-        let cubeGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+        let cubeGeometry = SCNBox(width: 0.1, height: 0.1, length: 0, chamferRadius: 0)
         
         // ノードのgeometryに追加
         cubeNode.geometry = cubeGeometry
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         let cubeMaterial = SCNMaterial()
         
         // 画像の読み込み
-        cubeMaterial.diffuse.contents = UIImage(named: "popstar")
+        cubeMaterial.diffuse.contents = UIImage(named: "space-meigen")
         
         cubeGeometry.firstMaterial = cubeMaterial
     }
